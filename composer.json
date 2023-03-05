@@ -1,6 +1,8 @@
 {
   "name": "hexlet/php-package",
-  "bin": ["bin/php-package"],
+  "bin": [
+    "bin/php-package"
+  ],
   "type": "library",
   "authors": [
     {
@@ -14,6 +16,9 @@
     "test": "phpunit tests"
   },
   "autoload": {
+    "files": [
+      "src/Utils.php"
+    ],
     "psr-4": {
       "Php\\Package\\": "src",
       "Php\\Package\\Tests\\": "tests"
@@ -31,7 +36,8 @@
     "phpstan/extension-installer": "^1.2",
     "symfony/var-dumper": "^6.2.1",
     "phpunit/phpunit": "^9.5.26",
-    "squizlabs/php_codesniffer": "^3.7.1"
+    "squizlabs/php_codesniffer": "^3.7.1",
+    "phar-io/manifest": "^2.0"
   },
   "config": {
     "allow-plugins": {
